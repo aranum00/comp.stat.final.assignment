@@ -1,13 +1,25 @@
 Package: comp.stat.final.assignment
-Title: What the Package Does (One Line, Title Case)
+Title: Simple Time Series Tools
 Version: 0.0.0.9000
-Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+Authors@R: c(
+  person(given = "Anders Hoff", family = "Ranum",
+     email = "a.ranum2000@gmail.com", role = c("aut", "cre")),
+  person(given = "Frederik Dyrup", family = "Revsbech",
+     email = "dyrupfrederik@gmail.com", role = "aut"),
+  person(given = "Kevin", family = "Luu",
+     email = "kluu2575@gmail.com", role = "aut"))
+Description: Provides simple methods for an S3 time series objects, including methods for printing, summarizing, and plotting.
+License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.1
 URL: https://github.com/aranum00/comp.stat.final.assignment
-BugReports: https://github.com/aranum00/comp.stat.final.assignment/issues
+BugReports:
+       https://github.com/aranum00/comp.stat.final.assignment/issues
+Suggests: 
+    knitr,
+    rmarkdown,
+    tinytest
+Imports: 
+    ggplot2
+VignetteBuilder: knitr
