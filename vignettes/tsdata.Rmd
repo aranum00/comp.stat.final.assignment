@@ -17,3 +17,45 @@ knitr::opts_chunk$set(
 ```{r setup}
 library(comp.stat.final.assignment)
 ```
+
+## Introduction
+
+The `comp.stat.final.assignment` package defines an S3 class named `tsdata` for representing univariate time series data. Each `tsdata` object stores a numeric vector of values and a corresponding vector of `Date` objects. This package provides methods for printing, summarizing, and plotting these objects.
+
+## Creating a `tsdata` Object
+
+You can create a `tsdata` object by using the `tsdata()` function, which takes two arguments: a numeric vector `data` and a `Date` vector `dates` of the same length.
+
+```{r}
+# Simulate 100 daily observations
+set.seed(123)
+data <- rnorm(100, mean = 10, sd = 2)
+dates <- seq.Date(from = as.Date("2025-01-01"), by = "day", length.out = 100)
+
+# Create a tsdata object
+x <- tsdata(data = data, dates = dates)
+```
+
+## Printing the `tsdata` Object
+
+The `print()` method gives a short summary of the object, including the number of observations and the time span:
+
+```{r}
+print(x)
+```
+
+## Summarizing the `tsdata` Object
+
+The `summary()` method returns useful statistics such as the number of observations, mean, median, standard deviation, minimum, maximum, and the start/end dates:
+
+```{r}
+summary(x)
+```
+
+## Plotting the `tsdata` Object
+
+The `plot()` method creates a time series plot using `ggplot2`, which makes it easy to visualize the time series.
+
+```{r}
+plot(x)
+```

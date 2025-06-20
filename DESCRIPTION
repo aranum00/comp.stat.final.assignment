@@ -8,7 +8,7 @@ Authors@R: c(
      email = "dyrupfrederik@gmail.com", role = "aut"),
   person(given = "Kevin", family = "Luu",
      email = "kluu2575@gmail.com", role = "aut"))
-Description: Provides simple methods for an S3 time series objects, including methods for printing, summarizing, and plotting.
+Description: Provides simple methods for S3 time series objects, including methods for printing, summarizing, and plotting data.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
